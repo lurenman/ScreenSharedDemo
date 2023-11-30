@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Boolean isScreenShared_td = false;
     private Boolean isCapturedHistory = false;
     private Button btn_screen_shared_detection_td;
+    private Button btn_screen_shared_indriver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btn_screen_shared_detection = (Button) findViewById(R.id.btn_screen_shared_detection);
         btn_screen_recording_detection = (Button) findViewById(R.id.btn_screen_recording_detection);
         btn_screen_shared_detection_td = (Button) findViewById(R.id.btn_screen_shared_detection_td);
+        btn_screen_shared_indriver = (Button) findViewById(R.id.btn_screen_shared_indriver);
 
         btn_screen_shared_detection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getScreenSharingStatus(mContext);
                 showToast(mContext, "同盾是否屏幕录制:" + isScreenShared_td);
+            }
+        });
+        btn_screen_shared_indriver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String screenSharing = IndriverScreenSharing.getScreenSharing(mContext);
+                showToast(mContext, "Indriver屏幕录制信息:" + screenSharing);
             }
         });
 

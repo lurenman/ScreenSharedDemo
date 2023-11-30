@@ -42,4 +42,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_screen_recording_detection" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_screen_shared_indriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:text="indriver屏幕共享检测"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_screen_shared_detection_td" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
